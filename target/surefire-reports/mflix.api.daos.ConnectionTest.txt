@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: mflix.api.daos.ConnectionTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 8.935 s <<< FAILURE! - in mflix.api.daos.ConnectionTest
+testMoviesCount(mflix.api.daos.ConnectionTest)  Time elapsed: 1.049 s  <<< ERROR!
+com.mongodb.MongoCommandException: Command failed with error 8000 (AtlasError): 'user is not allowed to do action [find] on [mflix.movies]' on server mflix-shard-00-00-sdpxz.mongodb.net:27017. The full response is { "ok" : 0, "errmsg" : "user is not allowed to do action [find] on [mflix.movies]", "code" : 8000, "codeName" : "AtlasError" }
+	at mflix.api.daos.ConnectionTest.testMoviesCount(ConnectionTest.java:44)
+
+testConnectionFindsCollections(mflix.api.daos.ConnectionTest)  Time elapsed: 1.708 s  <<< ERROR!
+com.mongodb.MongoCommandException: Command failed with error 8000 (AtlasError): 'user is not allowed to do action [listCollections] on [mflix.]' on server mflix-shard-00-00-sdpxz.mongodb.net:27017. The full response is { "ok" : 0, "errmsg" : "user is not allowed to do action [listCollections] on [mflix.]", "code" : 8000, "codeName" : "AtlasError" }
+	at mflix.api.daos.ConnectionTest.testConnectionFindsCollections(ConnectionTest.java:72)
+
+testConnectionFindsDatabase(mflix.api.daos.ConnectionTest)  Time elapsed: 1.709 s  <<< ERROR!
+com.mongodb.MongoCommandException: Command failed with error 8000 (AtlasError): 'user is not allowed to do action [listDatabases] on [admin.]' on server mflix-shard-00-00-sdpxz.mongodb.net:27017. The full response is { "ok" : 0, "errmsg" : "user is not allowed to do action [listDatabases] on [admin.]", "code" : 8000, "codeName" : "AtlasError" }
+	at mflix.api.daos.ConnectionTest.testConnectionFindsDatabase(ConnectionTest.java:53)
+
